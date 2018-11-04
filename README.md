@@ -25,18 +25,18 @@ In fact, there are so few people this crazy that I feel like I know them all by 
 
 Set your Credential API (Key and Token) in the file _Model/Twitter.class.php_
 
-    /**  
-     * TwitterAPI constructor.
-     * Create the API access object. Requires an array of settings::
-     * oauth access token, oauth access token secret, consumer key, consumer secret
-     * These are all available by creating your own application on dev.twitter.com
-     */
+     /**  
+      * TwitterAPI constructor.
+      * Create the API access object. Requires an array of settings::
+      * oauth access token, oauth access token secret, consumer key, consumer secret
+      * These are all available by creating your own application on dev.twitter.com
+      */
      public function __construct() {  
-      $this->_consumer_key = 'YOU_CONSUMER_KEY';  
-      $this->_consumer_secret = 'YOU_CONSUMER_SECRET';  
-      $this->_oauth_access_token = 'YOU_ACCESS_TOKEN';  
-      $this->_oauth_access_token_secret = 'YOU_ACCESS_TOKEN_SECRET';  
-    }
+         $this->_consumer_key = 'YOU_CONSUMER_KEY';  
+         $this->_consumer_secret = 'YOU_CONSUMER_SECRET';  
+         $this->_oauth_access_token = 'YOU_ACCESS_TOKEN';  
+         $this->_oauth_access_token_secret = 'YOU_ACCESS_TOKEN_SECRET';  
+     }
 
 ## Example
 

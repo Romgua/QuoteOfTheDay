@@ -7,7 +7,52 @@
     <script src="js/jquery.js"></script>
 </head>
 <body>
-    <!-- MODEL -->
+    <h1 id="quote-of-the-day-">Quote of the Day</h1>
+    <p>Share a quote of the day on social network</p>
+    <h1 id="installation">Installation</h1>
+    <p>Clone the repository <a href="https://github.com/Romgua/QuoteOfTheDay.git">QuoteOfTheDay</a></p>
+    <blockquote>
+        <p>git clone git@github.com:Romgua/QuoteOfTheDay.git</p>
+    </blockquote>
+    <p>And copy folders into your server (for ex: <strong>wampp</strong>)</p>
+    <h1 id="usage">Usage</h1>
+    <h2 id="how-it-works">How it works</h2>
+    <p>Check the Date() every hour.
+        If hour = 6:00 AM, get the Quote of the day,   connect to <a href="https://twitter.com/Quote_QoD">Twitter Account</a> and tweet the quote like   </p>
+    <blockquote>
+        <p><em>&quot;I think it is often easier to make progress on mega-ambitious dreams.<br>Since no one else is crazy enough to do it, you have little competition.<br>In fact, there are so few people this crazy that I feel like I know them all by first name.&quot; - Larry Page</em>  </p>
+    </blockquote>
+    <h2 id="set-your-credentials-api">Set your credentials API</h2>
+    <p>Set your Credential API (Key and Token) in the file <em>Model/Twitter.class.php</em></p>
+    <pre><code><span class="hljs-comment">
+     /**
+      * TwitterAPI constructor.
+      * Create the API access object. Requires an array of settings::
+      * oauth access token, oauth access token secret, consumer key, consumer secret
+      * These are all available by creating your own application on dev.twitter.com
+      */</span>
+     <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span><span class="hljs-params">()</span> </span>{
+         <span class="hljs-keyword">$this</span>-&gt;_consumer_key = <span class="hljs-string">'YOU_CONSUMER_KEY'</span>;
+         <span class="hljs-keyword">$this</span>-&gt;_consumer_secret = <span class="hljs-string">'YOU_CONSUMER_SECRET'</span>;
+         <span class="hljs-keyword">$this</span>-&gt;_oauth_access_token = <span class="hljs-string">'YOU_ACCESS_TOKEN'</span>;
+         <span class="hljs-keyword">$this</span>-&gt;_oauth_access_token_secret = <span class="hljs-string">'YOU_ACCESS_TOKEN_SECRET'</span>;
+     }
+    </code></pre><h2 id="example">Example</h2>
+    <pre><code>
+    <span class="hljs-keyword">let</span> _quoteController = <span class="hljs-keyword">new</span> QuoteController();
+    <span class="hljs-keyword">let</span> _twitterController = <span class="hljs-keyword">new</span> TwitterController();
+
+    <span class="hljs-comment">// Get the quote of the day</span>
+    _quoteController.getQoDbyCategory(category, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">quote</span>) </span>{
+        <span class="hljs-keyword">let</span> sQuote = <span class="hljs-string">"\""</span> + quote.quote + <span class="hljs-string">"\" - "</span> + quote.author;
+        <span class="hljs-comment">// Connect and tweet the quote of the day</span>
+        _twitterController.connect(sQuote);
+    });
+    </code></pre><h1 id="external-librairies-and-api">External librairies  and API</h1>
+    <p>I used some external librairies like <a href="https://jquery.com/">jQuery</a> for AJAX Request,   <a href="https://theysaidso.com/api/">QuoteREST</a> to get the quote of the day and   <a href="https://twitteroauth.com/">TwitterOAuth</a> to connect to Twitter and send a tweet.</p>
+
+
+<!-- MODEL -->
     <script src="Model/Quote.class.js"></script>
     <!-- CONTROLLER -->
     <script src="Controller/TwitterController.js"></script>

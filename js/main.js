@@ -5,9 +5,10 @@ $(document).ready(function(){
     window.setInterval(function(){ // Set interval for checking
         let date = new Date(); // Create a Date object to find out what time it is
         if(date.getHours() === 6 && date.getMinutes() === 0){ // Check the time
-            this.sendQuote(this.setCategory(date));
+            let category = setCategory(date);
+            sendQuote(category);
         }
-    }, 3600000); // Repeat every hour (1 hour)
+    }, 60000); // Repeat every minute (1 minute)
 });
 
 function sendQuote(category) {
