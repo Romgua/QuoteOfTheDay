@@ -1,10 +1,4 @@
 /**
- * Created by PhpStorm.
- * User: Romain
- * Date: 02/11/2018
- * Time: 12:16
- */
-/**
  * Class Quote
  */
 class Quote
