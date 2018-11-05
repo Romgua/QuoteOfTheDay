@@ -19,7 +19,7 @@ class TwitterController {
             url: "Controller/OAuthTwitterController.php",
             data: { action: 'sendTweet', data: quote },
             success: function(data) {
-                //console.log(data);
+                console.log("Tweet sent");
             }
         });
     }
