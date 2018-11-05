@@ -15,10 +15,10 @@ class TwitterAPI
      * These are all available by creating your own application on dev.twitter.com
      */
     public function __construct() {
-        $this->_consumer_key = 'YOU_CONSUMER_KEY';
-        $this->_consumer_secret = 'YOU_CONSUMER_SECRET';
-        $this->_oauth_access_token = 'YOU_ACCESS_TOKEN';
-        $this->_oauth_access_token_secret = 'YOU_ACCESS_TOKEN_SECRET';
+        $this->_consumer_key = 'y25rFYU8SOEtMZKNnHPDElfWn';
+        $this->_consumer_secret = 'V0WjSqMPEkfMz94VXIpOB6tjf5a1iRGV4MLAQJpezrCroq7xxq';
+        $this->_oauth_access_token = '1058305761481314304-fMxHh9WCffolCfRv51LsMCgsUQpeAr';
+        $this->_oauth_access_token_secret = 'kmLQ2itPi1siLMYvAuGY4ag3fcQEXtGJFZq7420l7FZmS';
     }
 
     /**
